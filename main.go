@@ -6,7 +6,15 @@ type Cell struct {
 	data string
 	next *Cell
 }
+type LinkedList struct {
+	sentinel *Cell
+}
 
+func makeLinkedList() LinkedList {
+	newList := LinkedList{}
+	newList.sentinel = &Cell{"SENTINEL", nil}
+	return newList
+}
 func main() {
 	aCell := Cell{"Apple", nil}
 	bCell := Cell{data: "Banana"}
