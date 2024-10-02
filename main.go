@@ -15,6 +15,10 @@ func makeLinkedList() LinkedList {
 	newList.sentinel = &Cell{"SENTINEL", nil}
 	return newList
 }
+func (me *Cell) addAfter(after *Cell) {
+	after.next = me.next
+	me.next = after
+}
 func main() {
 	aCell := Cell{"Apple", nil}
 	bCell := Cell{data: "Banana"}
