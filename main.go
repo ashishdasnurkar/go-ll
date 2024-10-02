@@ -24,6 +24,8 @@ func main() {
 	bCell := Cell{data: "Banana"}
 	aCell.next = &bCell
 	top := &aCell
+	cCell := Cell{"Dragon Fruit", nil}
+	(&bCell).addAfter(&cCell)
 	for cell := top; cell != nil; cell = cell.next {
 		fmt.Printf("%s ", cell.data)
 	}
